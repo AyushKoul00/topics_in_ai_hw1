@@ -1,22 +1,64 @@
 {% extends "base.html" %}
 
-{% block title %}Education - Rithika Dhamala{% endblock %}
+{% block title %}Education - Ayush Koul{% endblock %}
 
 {% block content %}
 <main class="flex-1 py-12">
   <div class="max-w-3xl mx-auto px-4">
     <h1 class="text-4xl font-bold mb-6">Education</h1>
     <div class="space-y-8">
-      <!-- Example Education Entry -->
+      <!-- Education Entry 1 -->
       <div>
         <h2 class="text-2xl font-semibold">Master of Science in Computer Science</h2>
-        <p class="text-muted-foreground">XYZ University, 2020 - 2022</p>
-        <ul class="list-disc list-inside mt-2 text-muted-foreground">
-          <li>Specialization in Artificial Intelligence and Machine Learning</li>
-          <li>Thesis: "Optimizing Distributed Systems for Scalability"</li>
+        <div class="flex justify-between">
+          <p class="text-muted-foreground italic">San Jose State University</p>
+          <p class="text-muted-foreground text-right">August 2023 - May 2025</p>
+        </div>
+        <p class="mt-2 text-muted-foreground"><span class="underline">Coursework:</span></p>
+
+        <!-- Fall 2023 (Semester 1) -->
+        <p class="mt-2 text-muted-foreground"><strong>Fall 2023 (Semester 1):</strong></p>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">CS 271: Topics in Machine Learning</li>
+          <li class="pl-2">CS 200W: Graduate Technical Writing</li>
+          <li class="pl-2">CS 174: Server-Side Web Programming</li>
+        </ul>
+
+        <!-- Spring 2024 (Semester 2) -->
+        <p class="mt-2 text-muted-foreground"><strong>Spring 2024 (Semester 2):</strong></p>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">CS 281: Topics in Cloud Computing</li>
+          <li class="pl-2">CS 252: Advanced Principles of Programming Languages</li>
+          <li class="pl-2">CS 255: Design And Analysis of Algorithms</li>
+          <li class="pl-2">METR 298: Research</li>
+        </ul>
+
+        <!-- Fall 2024 (Semester 3) -->
+        <p class="mt-2 text-muted-foreground"><strong>Fall 2024 (Semester 3):</strong></p>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">CS 157C: NoSQL Databases</li>
+          <li class="pl-2">CS 256: Topics in Artificial Intelligence</li>
+          <li class="pl-2">CS 259: Advanced Parallel Processing</li>
+          <li class="pl-2">CS 297: Project/Thesis Preparation</li>
+          <li class="pl-2">METR 298: Research</li>
         </ul>
       </div>
-      <!-- Add more education entries here -->
+
+      <!-- Education Entry 2 -->
+      <div>
+        <h2 class="text-2xl font-semibold">Bachelor of Science in Computer Science</h2>
+        <div class="flex justify-between">
+          <p class="text-muted-foreground italic">Graphic Era University</p>
+          <p class="text-muted-foreground text-right">August 2018 - June 2022</p>
+        </div>
+        <p class="mt-2 text-muted-foreground"><span class="underline">GPA:</span> 3.8 / 4.0</p>
+        <p class="mt-2 text-muted-foreground"><span class="underline">Relevant Courses:</span></p>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">Design and Analysis of Algorithms</li>
+          <li class="pl-2">Data Structures in C</li>
+          <li class="pl-2">Cloud Computing</li>
+        </ul>
+      </div>
     </div>
   </div>
 </main>

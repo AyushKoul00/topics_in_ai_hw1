@@ -1,67 +1,86 @@
 <nav class="bg-background dark:bg-background border-b border-border dark:border-border sticky top-0 w-full z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Left side -->
-        <div class="flex items-center">
-          <!-- Logo -->
-          <a href="{{ url_for('home') }}" class="text-xl font-semibold">Rithika Dhamala</a>
-        </div>
-        <!-- Right side -->
-        <div class="flex items-center space-x-6">
-          <!-- Navigation Links -->
-          <div class="hidden md:flex space-x-6 items-center">
-            <a href="{{ url_for('home') }}" class="hover:text-primary transition-colors duration-200">Home</a>
-            <a href="{{ url_for('about') }}" class="hover:text-primary transition-colors duration-200">About Me</a>
-            <a href="{{ url_for('education') }}" class="hover:text-primary transition-colors duration-200">Education</a>
-            <a href="{{ url_for('contact') }}" class="hover:text-primary transition-colors duration-200">Contact Me</a>
-            <!-- Dropdown Menu -->
-            <div class="relative">
-              <button id="more-button" class="hover:text-primary transition-colors duration-200 focus:outline-none flex items-center">
-                More
-                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <!-- Dropdown Content -->
-              <div id="more-menu" class="absolute left-0 mt-2 w-48 bg-card dark:bg-card border border-border dark:border-border rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200">
-                <a href="{{ url_for('research') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Research</a>
-                <a href="{{ url_for('work') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Work Experience</a>
-                <a href="{{ url_for('publications') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Publications</a>
-                <a href="{{ url_for('awards') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Honors & Awards</a>
-                <a href="{{ url_for('mentoring') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Mentoring & Leadership</a>
-                <a href="{{ url_for('gallery') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Gallery</a>
-                <a href="{{ url_for('chat') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Chat with Resume</a>
-              </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Left side -->
+      <div class="flex items-center">
+        <!-- Logo -->
+        <a href="{{ url_for('home') }}" class="text-xl font-semibold">Ayush Koul</a>
+      </div>
+      <!-- Right side -->
+      <div class="flex items-center space-x-6">
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="{{ url_for('home') }}" class="hover:text-primary transition-colors duration-200">Home</a>
+          <a href="{{ url_for('about') }}" class="hover:text-primary transition-colors duration-200">About Me</a>
+          <a href="{{ url_for('education') }}" class="hover:text-primary transition-colors duration-200">Education</a>
+          <a href="{{ url_for('contact') }}" class="hover:text-primary transition-colors duration-200">Contact Me</a>
+          <!-- Dropdown Menu -->
+          <div class="relative">
+            <button id="more-button"
+              class="hover:text-primary transition-colors duration-200 focus:outline-none flex items-center">
+              More
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <!-- Dropdown Content -->
+            <div id="more-menu"
+              class="absolute left-0 mt-2 w-48 bg-card dark:bg-card border border-border dark:border-border rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200">
+              <a href="{{ url_for('research') }}"
+                class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Research</a>
+              <a href="{{ url_for('work') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Work
+                Experience</a>
+              <a href="{{ url_for('publications') }}"
+                class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Publications</a>
+              <a href="{{ url_for('awards') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Honors &
+                Awards</a>
+              <a href="{{ url_for('mentoring') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Mentoring
+                & Leadership</a>
+              <a href="{{ url_for('gallery') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Gallery</a>
+              <a href="{{ url_for('chat') }}" class="block px-4 py-2 hover:bg-muted dark:hover:bg-muted">Chat with
+                Resume</a>
             </div>
           </div>
-          <!-- Theme Switch Button -->
-          <button id="theme-toggle" class="p-2 rounded-md bg-muted dark:bg-muted focus:outline-none">
-            <i id="theme-toggle-icon"></i>
-          </button>
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md bg-muted dark:bg-muted focus:outline-none">
-            <i data-feather="menu" id="menu-icon"></i>
-          </button>
         </div>
+        <!-- Theme Switch Button -->
+        <button id="theme-toggle"
+          class="w-12 h-12 flex items-center justify-center rounded-md bg-muted dark:bg-muted focus:outline-none">
+          <i id="theme-toggle-icon" class="fas fa-moon text-xl"></i> <!-- Default icon (moon) -->
+        </button>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button"
+          class="md:hidden w-12 h-12 flex items-center justify-center rounded-md bg-muted dark:bg-muted focus:outline-none">
+          <i id="menu-icon" class="fas fa-bars text-xl"></i> <!-- Default icon (menu) -->
+        </button>
       </div>
     </div>
-  
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="{{ url_for('home') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Home</a>
-        <a href="{{ url_for('about') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">About Me</a>
-        <a href="{{ url_for('education') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Education</a>
-        <a href="{{ url_for('contact') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Contact Me</a>
-        <div class="border-t border-border dark:border-border"></div>
-        <a href="{{ url_for('research') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Research</a>
-        <a href="{{ url_for('work') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Work Experience</a>
-        <a href="{{ url_for('publications') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Publications</a>
-        <a href="{{ url_for('awards') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Honors & Awards</a>
-        <a href="{{ url_for('mentoring') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Mentoring & Leadership</a>
-        <a href="{{ url_for('gallery') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Gallery</a>
-        <a href="{{ url_for('chat') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Chat with Resume</a>
-      </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="{{ url_for('home') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Home</a>
+      <a href="{{ url_for('about') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">About
+        Me</a>
+      <a href="{{ url_for('education') }}"
+        class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Education</a>
+      <a href="{{ url_for('contact') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Contact
+        Me</a>
+      <div class="border-t border-border dark:border-border"></div>
+      <a href="{{ url_for('research') }}"
+        class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Research</a>
+      <a href="{{ url_for('work') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Work
+        Experience</a>
+      <a href="{{ url_for('publications') }}"
+        class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Publications</a>
+      <a href="{{ url_for('awards') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Honors &
+        Awards</a>
+      <a href="{{ url_for('mentoring') }}"
+        class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Mentoring & Leadership</a>
+      <a href="{{ url_for('gallery') }}"
+        class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Gallery</a>
+      <a href="{{ url_for('chat') }}" class="block hover:bg-muted dark:hover:bg-muted px-3 py-2 rounded-md">Chat with
+        Resume</a>
     </div>
-  </nav>
-  
+  </div>
+</nav>

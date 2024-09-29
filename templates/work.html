@@ -1,22 +1,55 @@
 {% extends "base.html" %}
 
-{% block title %}Work Experience - Rithika Dhamala{% endblock %}
+{% block title %}Work Experience - Ayush Koul{% endblock %}
 
 {% block content %}
 <main class="flex-1 py-12">
   <div class="max-w-3xl mx-auto px-4">
     <h1 class="text-4xl font-bold mb-6">Work Experience</h1>
     <div class="space-y-8">
-      <!-- Example Work Entry -->
+      <!-- Work Entry 1 -->
       <div>
-        <h2 class="text-2xl font-semibold">Software Engineer at TechCorp</h2>
-        <p class="text-muted-foreground">June 2022 - Present</p>
-        <ul class="list-disc list-inside mt-2 text-muted-foreground">
-          <li>Developed scalable distributed systems for cloud platforms</li>
-          <li>Collaborated with cross-functional teams to enhance system performance</li>
+        <h2 class="text-2xl font-semibold">Graduate Research Assistant</h2>
+        <div class="flex justify-between">
+          <p class="text-muted-foreground italic">San Jose State University Research Foundation</p>
+          <p class="text-muted-foreground text-right">December 2023 - Present</p>
+        </div>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">Ported weather models for the Wildfire Interdisciplinary Research Center from CPU to GPU using OpenACC and CUDA, achieving up to 100x performance gains.</li>
+          <li class="pl-2">Utilized MPI and OpenACC for multi-GPU programming and distributing work over several GH200 GPUs.</li>
+          <li class="pl-2">Trained a custom in-house UNet model using PyTorch from over 10,000 satellite samples, resulting in a 30% improvement in weather prediction accuracy.</li>
         </ul>
       </div>
-      <!-- Add more work entries here -->
+
+      <!-- Work Entry 2 -->
+      <div>
+        <h2 class="text-2xl font-semibold">Software Engineering Intern</h2>
+        <div class="flex justify-between">
+          <p class="text-muted-foreground italic">Johnson & Johnson (Medtech)</p>
+          <p class="text-muted-foreground text-right">June 2024 - August 2024</p>
+        </div>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">Implemented critical non-product software for the high-priority Ottawa Project.</li>
+          <li class="pl-2">Re-architected the build system for Python monorepos, achieving an 8x performance improvement.</li>
+          <li class="pl-2">Developed custom Python plugins for pex file management with proprietary artifactories.</li>
+          <li class="pl-2">Conducted research on advanced optimization techniques, including remote caching, reducing CI/CD build times and costs by 70%.</li>
+        </ul>
+      </div>
+
+      <!-- Work Entry 3 -->
+      <div>
+        <h2 class="text-2xl font-semibold">Software Engineer</h2>
+        <div class="flex justify-between">
+          <p class="text-muted-foreground italic">Samsung Research</p>
+          <p class="text-muted-foreground text-right">August 2022 - July 2023</p>
+        </div>
+        <ul class="list-disc pl-6 mt-2 text-muted-foreground space-y-2">
+          <li class="pl-2">Developed an XR Input Simulation tool in Unity for device-agnostic testing, reducing development time by 80% and accelerating project delivery.</li>
+          <li class="pl-2">Created a Unity package with over 25 reusable UI components and tools for XR developers.</li>
+          <li class="pl-2">Architected a scalable native Android camera service using Google's Camera2 API and HAL (Java, C++), improving system performance by 65%.</li>
+          <li class="pl-2">Built a real-time camera frame visualization and performance analysis tool using OpenCV, adopted by 4 departments and over 60 employees for advanced insights and debugging.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </main>
