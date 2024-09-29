@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Rithika Dhamala{% endblock %}
+
+{% block content %}
+<main class="flex-1 flex items-center justify-center py-12">
+  <div class="max-w-xl mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-4">Hi, I'm <span class="text-primary">Rithika Dhamala</span></h1>
+    <p class="text-lg text-muted-foreground mb-6">I'm a Computer Science graduate specializing in distributed systems, AI, and scalable solutions. I'm passionate about using technology to solve real-world problems.</p>
+    <!-- Image with styling -->
+    <div class="relative mt-8">
+      <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Professional Photo" class="rounded-lg border border-border dark:border-border shadow-lg mx-auto w-48 h-48 object-cover transform hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Contact Me and Download Resume Buttons -->
+    <div class="mt-8 flex justify-center space-x-4">
+      <a href="{{ url_for('contact') }}" class="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors duration-200">Contact Me</a>
+      <a href="{{ url_for('static', filename='resume.pdf') }}" download class="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary-foreground hover:text-secondary transition-colors duration-200">Download Resume</a>
+    </div>
+  </div>
+</main>
+{% endblock %}
