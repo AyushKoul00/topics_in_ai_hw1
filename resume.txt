@@ -1,1 +1,60 @@
-THIS IS MY RESUME
+Ayush Koul
+San Jose, CA | (669) 204-2580 | ayushkoul00@gmail.com | linkedin.com/in/ayushkoul00/
+
+
+EDUCATION
+San Jose State University (SJSU)	San Jose, CA
+Master’s in Computer Science	August 2023 - May 2025
+GPA: 3.88
+Coursework:
+Fall 2023 (Semester 1): 
+• CS 271: Topics in Machine Learning
+• CS 200W: Graduate Technical Writing
+• CS 174: Server-Side Web Programming
+Spring 2024 (Semester 2): 
+• CS 281: Topics in Cloud Computing
+• CS 252: Advanced Principles of Programming Languages
+• CS 255: Design And Analysis of Algorithms
+• METR 298: Research
+Fall 2024 (Semester 3):
+• CS 157C: NoSQL Databases
+• CS 256: Topics in Artificial Intelligence
+• CS 259: Advanced Parallel Processing
+• CS 297: Project/ Thesis Preparation
+• METR 298: Research
+
+Graphic Era University	Dehradun, India
+Bachelor’s in Computer Science (GPA: 3.8 / 4.0)	August 2018 - June 2022
+Relevant Courses: Design and Analysis of Algorithms, Data Structures in C, Cloud Computing
+
+TECHNICAL SKILLS
+Programming Languages	C++, Python, Java, Rust, C#, HTML, CSS, JavaScript/TypeScript, SQL
+Frameworks/Tools	React.js, Next.js, Node.js, Flask, .NET, Git, Docker, CUDA, Unity
+Databases	MongoDB, MySQL, PostgreSQL, Firebase 
+Cloud Platforms	Azure, AWS, GCP
+Operating Systems	Linux, Unix, Windows, iOS, Android
+Certifications	Microsoft AZ-900, Microsoft DP-900
+
+WORK EXPERIENCE
+San Jose State University Research Foundation	San Jose, CA
+Graduate Research Assistant	December 2023 - Present
+Porting weather models for the Wildfire Interdisciplinary Research Center written in C++ on the CPU to the GPU using OpenAcc and CUDA with up to 100x performance gains (benchmarked on A100 and GH200)
+Utilized MPI and OpenACC for multi-GPU programming and distributing work over several GH200 GPUs
+Trained a custom in-house UNet model using PyTorch from 10,000+ satellite samples with a 30% improvement in weather prediction
+Johnson & Johnson (Medtech)	Santa Clara, CA
+Software Engineering Intern	June 2024 - August 2024
+Implemented critical non-product software for high-priority Ottawa Project
+Re-architected the build system for their Python monorepos achieving 8x performance improvement
+Engineered custom Python plugins for pex file management with proprietary artifactories
+Conducted in-depth research on advanced optimization techniques, including remote caching, resulting in a 70% reduction in CI/CD build times and costs
+Samsung Research	Bangalore, India
+Software Engineer	August 2022 - July 2023
+Programmed an XR Input Simulation tool in Unity for device-agnostic testing, decreasing development time by 80% and expediting project delivery
+Developed a Unity package with 25+ reusable UI components and development tools for XR developers
+Architected a scalable native Android camera service using Google's Camera2 API and HAL (Java, C++) with multi-threaded client requests and shared memory for a 65% increase in system performance
+Built a real-time camera frame visualization and performance analysis tool using OpenCV adopted by 4 departments and 60+ employees for advanced insights and debugging
+Arohar Technologies	Dehradun, India
+Software Engineering Intern	April 2019 - September 2019
+Developed an internal CRM tool with ASP.NET and MySQL using an MVC architecture for monitoring client data used by the entire company
+Integrated stored procedures in PL/SQL with Azure DevOps and CI/CD to enhance data management and storage, reducing query execution time by 30%
+
