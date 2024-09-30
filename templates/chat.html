@@ -55,38 +55,46 @@
 {% endblock %}
 
 {% block scripts %}
+<!-- Include SocketIO client library -->
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      // Chat functionality
+      const socket = io();
+
       const chatForm = document.getElementById('chat-form');
       const chatInput = document.getElementById('chat-input');
       const chatMessages = document.getElementById('chat-messages');
 
       chatForm.addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent form from submitting
+          event.preventDefault(); // Prevent form from submitting traditionally
 
-          const userMessage = chatInput.value.trim();
-          if (userMessage) {
-              // Display user message
-              const userMessageDiv = document.createElement('div');
-              userMessageDiv.classList.add('flex', 'justify-end');
-              userMessageDiv.innerHTML = `<div class="bg-primary text-primary-foreground rounded-md py-2 px-6">${userMessage}</div>`;
-              chatMessages.appendChild(userMessageDiv);
+          const message = chatInput.value.trim();
+          if (message) {
+              // Display user's message
+              const userMsgDiv = document.createElement('div');
+              userMsgDiv.classList.add('flex', 'justify-end', 'mt-2');
+              userMsgDiv.innerHTML = `<div class="bg-primary text-primary-foreground rounded-md py-2 px-6">${message}</div>`;
+              chatMessages.appendChild(userMsgDiv);
 
-              // Clear input
+              // Emit message to server
+              socket.emit('message', message);
+
+              // Clear input field
               chatInput.value = '';
               chatMessages.scrollTop = chatMessages.scrollHeight;
-
-              // Simulate bot response
-              setTimeout(() => {
-                  const botMessageDiv = document.createElement('div');
-                  botMessageDiv.classList.add('flex');
-                  botMessageDiv.innerHTML = `<div class="bg-muted rounded-md py-2 px-6">This is a placeholder response related to my resume.</div>`;
-                  chatMessages.appendChild(botMessageDiv);
-                  chatMessages.scrollTop = chatMessages.scrollHeight;
-              }, 1000);
           }
+      });
+
+      // Listen for responses from the server
+      socket.on('response', function(response) {
+          // Display bot's response
+          const botMsgDiv = document.createElement('div');
+          botMsgDiv.classList.add('flex', 'justify-start', 'mt-2');
+          botMsgDiv.innerHTML = `<div class="bg-muted rounded-md py-2 px-6">${response}</div>`;
+          chatMessages.appendChild(botMsgDiv);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
       });
   });
 </script>
+
 {% endblock %}

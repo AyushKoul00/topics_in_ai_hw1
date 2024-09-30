@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_socketio import SocketIO, send
+from flask_socketio import SocketIO, send, emit
 from test import get_response
 from db import insertQuery
 
@@ -76,8 +76,10 @@ def chat():
 @socketio.on('message')
 def handle_message(msg):
     print(f'Received message: {msg}')
-    send(f'{get_response(msg)}', broadcast=True)
-    # send(f' You said: {msg}', broadcast=True)
+    # Get response from OpenAI
+    response = get_response(msg)
+    # Emit the response back to the client who sent the message
+    emit('response', response)
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
