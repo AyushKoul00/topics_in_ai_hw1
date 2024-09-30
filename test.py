@@ -1,11 +1,16 @@
 from openai import OpenAI
 from os import getenv
-from key import key
+from dotenv import load_dotenv
+
+load_dotenv()
+OPENROUTER_API_KEY = getenv('OPENROUTER_API_KEY')
+
+print(OPENROUTER_API_KEY)
 
 # gets API Key from environment variable OPENAI_API_KEY
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key=key,
+  api_key=OPENROUTER_API_KEY,
 )
 
 with open('resume.txt', 'r') as f:
