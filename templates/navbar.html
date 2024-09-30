@@ -84,3 +84,95 @@
     </div>
   </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+  {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    // Function to update the icon based on the theme
+    function updateThemeIcon()
+    {
+      if (htmlElement.classList.contains('dark'))
+      {
+        themeToggleIcon.classList.remove('fa-moon');
+        themeToggleIcon.classList.add('fa-sun'); // Change to sun for dark mode
+      } else
+      {
+        themeToggleIcon.classList.remove('fa-sun');
+        themeToggleIcon.classList.add('fa-moon'); // Change to moon for light mode
+      }
+    }
+
+    // On page load, set the initial theme and icon
+    if (localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+    {
+      htmlElement.classList.add('dark');
+    } else
+    {
+      htmlElement.classList.remove('dark');
+    }
+    updateThemeIcon(); // Update the icon on page load
+
+    // Add event listener to toggle theme
+    themeToggleBtn.addEventListener('click', () =>
+    {
+      htmlElement.classList.toggle('dark');
+      if (htmlElement.classList.contains('dark'))
+      {
+        localStorage.setItem('color-theme', 'dark');
+      } else
+      {
+        localStorage.setItem('color-theme', 'light');
+      }
+      updateThemeIcon(); // Update icon after toggling the theme
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuButton.addEventListener('click', () =>
+    {
+      mobileMenu.classList.toggle('hidden');
+      // Toggle between the Font Awesome 'bars' (menu) and 'times' (close) icons
+      if (mobileMenu.classList.contains('hidden'))
+      {
+        menuIcon.classList.remove('fa-times'); // Remove close icon
+        menuIcon.classList.add('fa-bars'); // Add menu icon
+      } else
+      {
+        menuIcon.classList.remove('fa-bars'); // Remove menu icon
+        menuIcon.classList.add('fa-times'); // Add close icon
+      }
+    });
+
+    // Dropdown menu functionality
+    const moreButton = document.getElementById('more-button');
+    const moreMenu = document.getElementById('more-menu');
+    let dropdownTimeout;
+
+    function showDropdown()
+    {
+      clearTimeout(dropdownTimeout);
+      moreMenu.classList.remove('opacity-0', 'invisible');
+    }
+
+    function hideDropdown()
+    {
+      dropdownTimeout = setTimeout(() =>
+      {
+        moreMenu.classList.add('opacity-0', 'invisible');
+      }, 200);
+    }
+
+    moreButton.addEventListener('mouseenter', showDropdown);
+    moreButton.addEventListener('mouseleave', hideDropdown);
+    moreMenu.addEventListener('mouseenter', showDropdown);
+    moreMenu.addEventListener('mouseleave', hideDropdown);
+  });
+</script>

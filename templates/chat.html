@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Chat with My Resume - Ayush Koul{% endblock %}
+{% block title %}Resume Chat AI - Ayush Koul{% endblock %}
 
 {% block content %}
 <main class="flex-1 py-12">
   <div class="max-w-2xl mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-6">Chat with My Resume</h1>
+    <h1 class="text-4xl font-bold mb-6">Resume Chat AI</h1>
     <!-- Chat Interface -->
     <div class="border border-border rounded-lg p-4">
-      <!-- Chat messages will go here -->
+      <!-- Scrollable Chat messages will go here -->
       <div id="chat-messages" class="space-y-4 h-64 overflow-y-auto">
         <!-- Placeholder for chat messages -->
       </div>
@@ -20,6 +20,38 @@
     </div>
   </div>
 </main>
+{% endblock %}
+
+{% block styles %}
+<style>
+  /* Chat bubble styling */
+  .chat-bubble {
+    max-width: 80%; /* Ensure the bubble doesn't exceed 80% of the container width */
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded edges for chat bubbles */
+    margin-bottom: 8px;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .chat-bubble-user {
+    background-color: #7c3aed; /* Purple bubble for user messages */
+    color: white;
+    align-self: flex-end;
+  }
+
+  .chat-bubble-bot {
+    background-color: #f3f4f6; /* Grey bubble for bot messages */
+    color: black;
+    align-self: flex-start;
+  }
+
+  /* Ensuring the chat bubble expands vertically as needed */
+  .chat-bubble p {
+    margin: 0;
+  }
+</style>
 {% endblock %}
 
 {% block scripts %}
@@ -38,7 +70,7 @@
               // Display user message
               const userMessageDiv = document.createElement('div');
               userMessageDiv.classList.add('flex', 'justify-end');
-              userMessageDiv.innerHTML = `<div class="bg-primary text-primary-foreground rounded-lg p-2">${userMessage}</div>`;
+              userMessageDiv.innerHTML = `<div class="bg-primary text-primary-foreground rounded-md py-2 px-6">${userMessage}</div>`;
               chatMessages.appendChild(userMessageDiv);
 
               // Clear input
@@ -49,7 +81,7 @@
               setTimeout(() => {
                   const botMessageDiv = document.createElement('div');
                   botMessageDiv.classList.add('flex');
-                  botMessageDiv.innerHTML = `<div class="bg-muted rounded-lg p-2">This is a placeholder response related to my resume.</div>`;
+                  botMessageDiv.innerHTML = `<div class="bg-muted rounded-md py-2 px-6">This is a placeholder response related to my resume.</div>`;
                   chatMessages.appendChild(botMessageDiv);
                   chatMessages.scrollTop = chatMessages.scrollHeight;
               }, 1000);
