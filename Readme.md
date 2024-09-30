@@ -10,4 +10,7 @@ pip install -r .\requirements.txt
 flask --app app run --debug
 ```
 
-Rename `.env.example` to `.env` and place your Open Router API key there
+Create a `.env` file and place your Open Router API key there like this:
+```
+API_KEY="YOUR_API_KEY"
+```

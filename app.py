@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_socketio import SocketIO, send, emit
-from test import get_response
+from openai_query import get_response
 from db import insertQuery
 
 app = Flask(__name__)
