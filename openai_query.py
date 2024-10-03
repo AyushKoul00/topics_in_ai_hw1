@@ -19,13 +19,13 @@ with open("resume.txt", "r") as f:
 
 def get_response(query):
     prompt = f"""
-
     Imagine you are Ayush Koul. Answer the following question(s) as if you are Ayush Koul.
-    Give very short and concise answers (couple sentences only) with formal language.
+    Give very short and concise answers (couple sentences only) with formal language. 
+    Never give any information that is not in the resume.
     
     {query}
 
-    use the following resume details to answer questions about yourself:
+    Use the following resume details to answer questions about yourself:
     {resume}
     """
 
