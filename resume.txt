@@ -58,3 +58,52 @@ Software Engineering Intern	April 2019 - September 2019
 Developed an internal CRM tool with ASP.NET and MySQL using an MVC architecture for monitoring client data used by the entire company
 Integrated stored procedures in PL/SQL with Azure DevOps and CI/CD to enhance data management and storage, reducing query execution time by 30%
 
+Research
+Machine Learning Imputation Methods
+Exploring methods to impute datasets in Machine Learning for data analytics
+
+I published a research paper in my Undergrad about analysing several imputation techniques on air quality datasets to see which one gives the best performance on several Machine Learning models.
+
+Publications
+Performance Analysis of Imputation Methods on Air Quality Dataset
+SMART COM 2020
+
+June 2021
+
+Mentor: Prof. Manish Mahajan
+ISBN: 9780367765521
+
+Honors & Awards
+National Awards
+AP Scholar with Distinction
+Charlotte, U.S.A, 2018
+
+National AP Scholar
+Charlotte, U.S.A, 2018
+
+National Honor Society Member
+Charlotte, U.S.A, 2017
+
+National Society of High School Scholars Member
+New Jersey, U.S.A, 2016
+
+Institutional Awards
+50% Financial Scholarship based on Academic Profile
+Graphic Era University, Dehradun, India, 2018-2022
+
+4 Varsity Letters, Track and Field
+U.S.A, 2014-2018
+
+2 Varsity Letters, Wrestling
+New Jersey, U.S.A, 2014-2016
+
+Varsity Letter, Football
+New Jersey, U.S.A, 2015
+
+Mentoring & Leadership
+Tutor
+SchoolHouse.world (Affiliated with Khan Academy)
+
+August 2021 - Present
+
+Tutored students from around the world on STEM topics such as AP Calculus AB/BC and Computer Science.
