@@ -1,6 +1,17 @@
 import sqlite3
 
 
+def selectQuery():
+    # Open connection and cursor using a context manager
+    with sqlite3.connect("mydb.db") as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users")
+        rows = cursor.fetchall()
+        for row in rows:
+            print(row)
+    print("Data selected successfully")
+
+
 def createTable():
     # Open connection and cursor using a context manager
     with sqlite3.connect("mydb.db") as conn:
@@ -32,3 +43,4 @@ def insertQuery(name, email, message):
 
 if __name__ == "__main__":
     createTable()
+    selectQuery()

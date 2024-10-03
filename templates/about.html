@@ -5,7 +5,15 @@
 {% block content %}
 <main class="flex-1 py-12">
   <div class="max-w-3xl mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-6">About Me</h1>
+    <!-- Flex container to align heading and button -->
+    <div class="flex justify-between items-center mb-6">
+      <!-- About Me Heading -->
+      <h1 class="text-4xl font-bold">About Me</h1>
+
+      <!-- Download Resume Button, aligned to the right -->
+      <a href="{{ url_for('static', filename='resume.pdf') }}" download class="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary-foreground hover:text-secondary transition-colors duration-200">Download Resume</a>
+    </div>
+
     <p class="text-lg text-muted-foreground mb-4">
       Welcome! I'm <strong>Ayush Koul</strong>, a passionate computer scientist specializing in distributed systems, AI,
       and scalable solutions. My journey in technology began with a fascination for how things work and a desire to
@@ -27,7 +35,6 @@
       Samsung Research, where I developed XR tools and services that improved system efficiency and were adopted by
       multiple departments.
     </p>
-
   </div>
 </main>
 {% endblock %}
