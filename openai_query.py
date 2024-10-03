@@ -30,7 +30,8 @@ def get_response(query):
     """
 
     completion = client.chat.completions.create(
-        model="mistralai/mistral-7b-instruct:free",
+        # model="mistralai/mistral-7b-instruct:free",
+        model="nousresearch/hermes-3-llama-3.1-405b:free",
         messages=[
             {
                 "role": "user",
