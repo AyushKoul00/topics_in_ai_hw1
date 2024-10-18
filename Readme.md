@@ -39,21 +39,32 @@ This project is an interactive resume and portfolio website hosted on an Amazon 
    cd topics_in_ai_hw1
    ```
 
-4. Set up environment variables:
+4. How to run the app:
+
+   In Windows (Powershell)
+
+   ```ps
+   python -m venv .venv
+   .\.venv\Scripts\activate
+   pip install -r .\requirements.txt
+   flask --app app run --debug
+   ```
+
+5. Set up environment variables:
 
    - Add your API key to the `.env` file:
      ```
      API_KEY="your-api-key-here"
      ```
 
-5. Create and activate a virtual environment:
+6. Create and activate a virtual environment:
 
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    ```
 
-6. Install dependencies:
+7. Install dependencies:
    ```bash
    pip install -r requirements.txt
    pip install eventlet gunicorn
@@ -173,14 +184,3 @@ Add an inbound rule for HTTP (port 80) allowing access from Anywhere IPv4.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-
-## How to run the app in Flask (development mode)
-
-### Windows (Powershell)
-```ps
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r .\requirements.txt
-flask --app app run --debug
-```
